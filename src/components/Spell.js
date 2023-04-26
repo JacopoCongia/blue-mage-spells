@@ -4,7 +4,7 @@ function Spell({ spell, textOnHover, ...rest }) {
   const updatedSources = spell.sources.map((source) => {
     return (
       <td
-        className="flex flex-col"
+        className="flex flex-col my-1"
         key={source.text}
       >
         {source.text}
@@ -18,7 +18,7 @@ function Spell({ spell, textOnHover, ...rest }) {
         {...rest}
         className="group relative hover:bg-indigo-200 dark:hover:bg-indigo-500 cursor-pointer border-b-2 border-neutral-200 dark:border-neutral-700"
       >
-        <td className="px-1 py-4">{spell.order}</td>
+        <td className="px-1 py-5">{spell.order}</td>
         <td>{spell.name}</td>
         {updatedSources}
         <td>

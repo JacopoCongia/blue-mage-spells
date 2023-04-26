@@ -20,7 +20,7 @@ function SpellsDataProvider({ children }) {
     // let spellList = JSON.parse(localStorage.getItem("customList"));
 
     // setCustomList(spellList);
-  }, []);
+  }, [theme]);
 
   const valuesToShare = {
     spells,

@@ -13,10 +13,10 @@ function SpellList({ filteredSpells }) {
 
   return (
     <div className="p-5">
-      <table className="w-[100%] table-auto ">
+      <table className="w-[100%]">
         <thead>
           <tr className="text-left border-b-2 border-neutral-200 dark:border-neutral-700">
-            <th>#</th>
+            <th className="py-2">#</th>
             <th>Name</th>
             <th>Learned From</th>
           </tr>
