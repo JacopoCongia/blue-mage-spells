@@ -12,22 +12,21 @@ function SpellSearch({ spells, setFilteredSpells }) {
     setTerm(event.target.value);
     if (!event.target.value) return setFilteredSpells(spells);
 
-    const updatedSpells = spells.filter((spell) =>
-      spell.name.toLowerCase().includes(term.toLowerCase())
+    const updatedSpells = spells.filter(
+      (spell) =>
+        spell.name.toLowerCase().includes(event.target.value.toLowerCase()) ||
+        spell.order === parseInt(event.target.value)
     );
     setFilteredSpells(updatedSpells);
   };
 
   return (
-    <form
-      className="bg-blue-900 text-white p-5"
-      onSubmit={handleSubmit}
-    >
+    <form onSubmit={handleSubmit}>
       <input
-        className="border rounded p-2 text-black w-[100%] bg-blue-100"
+        className="w-[300px] rounded p-2 text-black bg-blue-50 focus:outline-none"
         onChange={handleSearchChange}
         value={term}
-        placeholder="Search spells..."
+        placeholder="Search by number or name..."
       ></input>
     </form>
   );

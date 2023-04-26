@@ -1,46 +1,37 @@
-import { useEffect, useState } from "react";
-
-function Spell({ spell }) {
-  const [selected, setSelected] = useState(false);
+function Spell({ spell, textOnHover, ...rest }) {
   const updatedDescription = spell.description.replaceAll("*", "");
 
-  const handleClick = () => {
-    setSelected((prevSelection) => !prevSelection);
-  };
-
-  const style = selected
-    ? "bg-gray-100 border p-5 bg-green-100 cursor-pointer hover:opacity-90"
-    : "bg-gray-100 border p-5 cursor-pointer hover:bg-gray-200";
-
-  //   useEffect(() => {
-  //     const selection = JSON.parse(localStorage.getItem("selection")) || selected;
-  //     setSelected(selection);
-  //   }, []);
-
-  //   useEffect(() => {
-  //     localStorage.setItem("selection", JSON.stringify(selected));
-  //   }, [selected]);
+  const updatedSources = spell.sources.map((source) => {
+    return (
+      <td
+        className="flex flex-col my-1"
+        key={source.text}
+      >
+        {source.text}
+      </td>
+    );
+  });
 
   return (
-    <div
-      onClick={handleClick}
-      className={style}
-    >
-      <div className="flex items-center mb-5">
-        <h1 className="font-bold">
-          #{spell.order} - {spell.name} - Patch: {spell.patch}
-        </h1>
-        <img
-          className="ml-auto"
-          src={spell.icon}
-        />
-      </div>
-      <p className="mb-5">{updatedDescription}</p>
-      <p>
-        <span className="font-semibold">Obtained from: </span>
-        {spell.sources[0].text}
-      </p>
-    </div>
+    <>
+      <tr
+        {...rest}
+        className="group relative hover:bg-indigo-200 dark:hover:bg-indigo-500 cursor-pointer border-b-2 border-neutral-200 dark:border-neutral-700"
+      >
+        <td className="px-1 py-5">{spell.order}</td>
+        <td>{spell.name}</td>
+        {updatedSources}
+        <td>
+          <img
+            className="min-w-[42px]"
+            src={spell.icon}
+          />
+        </td>
+        <td className="invisible opacity-[95%] absolute max-w-[50vw] text-white rounded bottom-[105%] left-0 bg-neutral-700 dark:bg-neutral-600 p-[10px] text-[15px] group-hover:visible">
+          {updatedDescription}
+        </td>
+      </tr>
+    </>
   );
 }
 

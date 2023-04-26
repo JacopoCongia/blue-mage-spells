@@ -1,30 +1,18 @@
-import { useEffect, useState } from "react";
-import fetchSpells from "@/fetchSpells";
-import SpellSearch from "@/components/SpellSearch";
+import useSpellsData from "@/hooks/use-spells-data";
 import SpellList from "@/components/SpellList";
+import Navbar from "@/components/Navbar";
 
 export default function Home() {
-  const [spells, setSpells] = useState([]);
-  const [filteredSpells, setFilteredSpells] = useState([]);
+  const { filteredSpells, theme } = useSpellsData();
 
-  const retrieveSpells = async () => {
-    const result = await fetchSpells();
-
-    setSpells(result);
-    setFilteredSpells(result);
-  };
-
-  useEffect(() => {
-    retrieveSpells();
-  }, []);
+  const dark = theme ? "dark bg-neutral-800" : "bg-neutral-100";
 
   return (
-    <div>
-      <SpellSearch
-        spells={spells}
-        setFilteredSpells={setFilteredSpells}
-      />
-      <SpellList filteredSpells={filteredSpells} />
+    <div className={`${dark} h-[100vh]`}>
+      <div className="bg-neutral-100 text-neutral-900 dark:bg-neutral-800 dark:text-neutral-100">
+        <Navbar />
+        <SpellList filteredSpells={filteredSpells} />
+      </div>
     </div>
   );
 }
