@@ -19,7 +19,7 @@ function SpellList({ filteredSpells }) {
   });
 
   return (
-    <div className="p-5">
+    <div className="p-5 text-[15px]">
       <table className="w-[100%]">
         <thead>
           <tr className="text-left border-b-2 border-neutral-200 dark:border-neutral-700">

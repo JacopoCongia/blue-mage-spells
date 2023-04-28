@@ -3,7 +3,7 @@ import useSpellsData from "@/hooks/use-spells-data";
 import classNames from "classnames";
 
 function RadioSelector({ config }) {
-  const [selected, setSelected] = useState({});
+  const [selected, setSelected] = useState({ category: "all" });
   const { includeOnly } = useSpellsData();
   const classes = classNames(
     "peer-checked:bg-indigo-200",
