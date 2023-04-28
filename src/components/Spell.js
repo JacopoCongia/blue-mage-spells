@@ -1,4 +1,4 @@
-function Spell({ spell, textOnHover, ...rest }) {
+function Spell({ spell, textOnHover, isSelected, ...rest }) {
   const updatedDescription = spell.description.replaceAll("*", "");
 
   const updatedSources = spell.sources.map((source) => {
@@ -16,7 +16,7 @@ function Spell({ spell, textOnHover, ...rest }) {
     <>
       <tr
         {...rest}
-        className="group relative hover:bg-indigo-200 dark:hover:bg-indigo-500 cursor-pointer border-b-2 border-neutral-200 dark:border-neutral-700"
+        className={`group relative hover:bg-indigo-200 dark:hover:bg-indigo-500 cursor-pointer border-b-2 border-neutral-200 dark:border-neutral-700 ${isSelected}`}
       >
         <td className="px-1 py-5">{spell.order}</td>
         <td>{spell.name}</td>

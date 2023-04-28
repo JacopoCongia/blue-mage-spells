@@ -1,5 +1,6 @@
 import { createContext, useState, useEffect } from "react";
-import fetchSpells from "@/fetchSpells";
+// import fetchSpells from "@/fetchSpells";
+import data from "@/data";
 
 const SpellsDataContext = createContext();
 
@@ -8,26 +9,49 @@ function SpellsDataProvider({ children }) {
   const [filteredSpells, setFilteredSpells] = useState([]);
   const [theme, setTheme] = useState(false);
 
-  const retrieveSpells = async () => {
-    const result = await fetchSpells();
+  const includeOnly = (name) => {
+    if (name !== "all") {
+      const updatedList = spells.filter((spell) =>
+        spell.sources.some((el) => el.type.toLowerCase() === name.toLowerCase())
+      );
+      setFilteredSpells(updatedList);
+    } else setFilteredSpells(spells);
+  };
 
-    setSpells(result);
-    setFilteredSpells(result);
+  // const retrieveSpells = async () => {
+  //   const result = await fetchSpells();
+
+  //   const updatedSpells = result.map((spell) => {
+  //     return { ...spell, owned: false };
+  //   });
+  //   setSpells(updatedSpells);
+  //   setFilteredSpells(updatedSpells);
+  // };
+
+  const selectSpell = (spell) => {
+    const selectedSpells = filteredSpells.map((el) => {
+      if (el.id === spell.id) {
+        return { ...el, owned: !spell.owned };
+      } else return el;
+    });
+    setFilteredSpells(selectedSpells);
   };
 
   useEffect(() => {
-    retrieveSpells();
+    setSpells(data);
+    setFilteredSpells(data);
     // let spellList = JSON.parse(localStorage.getItem("customList"));
-
     // setCustomList(spellList);
-  }, [theme]);
+  }, []);
 
   const valuesToShare = {
     spells,
     filteredSpells,
     setFilteredSpells,
     theme,
-    setTheme
+    setTheme,
+    selectSpell,
+    includeOnly
   };
 
   return (

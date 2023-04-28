@@ -1,12 +1,19 @@
+import useSpellsData from "@/hooks/use-spells-data";
 import Spell from "./Spell";
 
 function SpellList({ filteredSpells }) {
+  const { selectSpell } = useSpellsData();
+
   const spellsElement = filteredSpells.map((spell) => {
+    const isSelected = spell.owned === true ? "opacity-25" : "";
+
     return (
       <Spell
         key={spell.id}
         spell={spell}
         textOnHover="Add to My Spells"
+        onClick={() => selectSpell(spell)}
+        isSelected={isSelected}
       />
     );
   });
