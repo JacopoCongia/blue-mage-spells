@@ -11,34 +11,37 @@ function Navbar() {
     { id: "dungeon", title: "Dungeon", position: "" },
     { id: "raid", title: "Raid", position: "" },
     { id: "trial", title: "Trial", position: "last" }
+    // { id: "saved", title: "My Spells", position: "last" }
   ];
 
   return (
-    <div className="flex items-center bg-indigo-400 dark:bg-indigo-900 p-5">
+    <div className="flex justify-evenly items-center bg-indigo-400 dark:bg-indigo-900 p-5">
       <SpellSearch
         spells={spells}
         setFilteredSpells={setFilteredSpells}
       />
-      <div className="ml-5">
+      <div className="mx-auto">
         <RadioSelector config={config} />
       </div>
-      {!theme ? (
-        <div className="flex items-center gap-2 ml-auto">
-          <FaSun className="text-white text-xl" />
-          <BsToggleOff
-            onClick={() => setTheme(!theme)}
-            className="text-white text-3xl cursor-pointer"
-          />
-        </div>
-      ) : (
-        <div className="flex items-center gap-3 ml-auto">
-          <FaMoon className="text-white text-lg" />
-          <BsToggleOn
-            onClick={() => setTheme(!theme)}
-            className="text-white text-3xl cursor-pointer"
-          />
-        </div>
-      )}
+      <div className="">
+        {!theme ? (
+          <div className="flex items-center gap-2 ml-auto">
+            <FaSun className="text-white text-xl" />
+            <BsToggleOff
+              onClick={() => setTheme(!theme)}
+              className="text-white text-3xl cursor-pointer"
+            />
+          </div>
+        ) : (
+          <div className="flex items-center gap-3 ml-auto">
+            <FaMoon className="text-white text-lg" />
+            <BsToggleOn
+              onClick={() => setTheme(!theme)}
+              className="text-white text-3xl cursor-pointer"
+            />
+          </div>
+        )}
+      </div>
     </div>
   );
 }
