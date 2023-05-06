@@ -48,7 +48,7 @@ function SpellsDataProvider({ children }) {
   useEffect(() => {
     let spellList = JSON.parse(localStorage.getItem("savedSpells"));
     let darkMode = JSON.parse(localStorage.getItem("darkMode"));
-    if (spellList !== []) {
+    if (spellList !== [] && spellList !== null) {
       setSavedSpells(spellList);
     }
     if (darkMode !== false) {
