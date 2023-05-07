@@ -66,6 +66,7 @@ function SpellsDataProvider({ children }) {
   const valuesToShare = {
     spells,
     filteredSpells,
+    savedSpells,
     setFilteredSpells,
     theme,
     setTheme,

@@ -2,7 +2,7 @@ import useSpellsData from "@/hooks/use-spells-data";
 import Spell from "./Spell";
 
 function SpellList({ filteredSpells }) {
-  const { selectSpell } = useSpellsData();
+  const { spells, selectSpell, savedSpells } = useSpellsData();
 
   const spellsElement = filteredSpells.map((spell) => {
     return (
@@ -26,6 +26,9 @@ function SpellList({ filteredSpells }) {
             <th className="text-center">Learned From</th>
             <th className="text-center hidden md:table-cell">Description</th>
             <th className="text-center hidden lg:table-cell">Rating</th>
+            <th className="">
+              {savedSpells.length} / {spells.length}
+            </th>
           </tr>
         </thead>
         <tbody>{spellsElement}</tbody>

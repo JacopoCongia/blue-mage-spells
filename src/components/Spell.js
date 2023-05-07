@@ -1,13 +1,11 @@
-import { useState } from "react";
+import { BsCheckCircle } from "react-icons/bs";
 import useSpellsData from "@/hooks/use-spells-data";
 
 function Spell({ spell, textOnHover, ...rest }) {
   const { owned } = useSpellsData();
-  // const [checkboxData, setCheckboxData] = useState({
-  //   isOwned: false
-  // });
+
   const updatedDescription = spell.description.replaceAll("*", "");
-  const selected = owned(spell) && "opacity-20";
+  const selected = owned(spell) && "opacity-25";
 
   const updatedSources = spell.sources.map((source) => {
     return (
@@ -32,21 +30,9 @@ function Spell({ spell, textOnHover, ...rest }) {
       star = "★★★★";
     } else if (spell.rank === 5) {
       star = "★★★★★";
-    } else return "";
+    } else return null;
     return star;
   };
-
-  // const handleChange = (event) => {
-  //   let { checked } = event.target;
-  //   setCheckboxData((prevCheckboxData) => {
-  //     return {
-  //       ...prevCheckboxData,
-  //       isOwned: checked
-  //     };
-  //   });
-  // };
-
-  // const owned = checkboxData.isOwned && "opacity-20";
 
   return (
     <>
@@ -71,15 +57,7 @@ function Spell({ spell, textOnHover, ...rest }) {
           {updatedDescription}
         </td>
         <td className="text-center hidden lg:table-cell">{rating()}</td>
-        {/* <td className="text-center">
-          <input
-            type="checkbox"
-            checked={checkboxData.isOwned}
-            id={spell.name}
-            name="isOwned"
-            onChange={handleChange}
-          />
-        </td> */}
+        <td></td>
       </tr>
     </>
   );
