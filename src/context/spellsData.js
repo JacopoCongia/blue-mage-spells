@@ -9,11 +9,15 @@ function SpellsDataProvider({ children }) {
   const [savedSpells, setSavedSpells] = useState([]);
   const [theme, setTheme] = useState(false);
 
+  const missingSpells = spells.filter(
+    ({ id: id1 }) => !savedSpells.some(({ id: id2 }) => id2 === id1)
+  );
+
   const includeOnly = (name) => {
     if (name === "all") {
       setFilteredSpells(spells);
-      // } else if (name === "saved") {
-      //   setFilteredSpells(savedSpells);
+    } else if (name === "missing") {
+      setFilteredSpells(missingSpells);
     } else if (name === "dungeon" || "trial" || "raid") {
       const updatedList = spells.filter((spell) =>
         spell.sources.some((el) => el.type.toLowerCase() === name.toLowerCase())
@@ -66,6 +70,7 @@ function SpellsDataProvider({ children }) {
   const valuesToShare = {
     spells,
     filteredSpells,
+    savedSpells,
     setFilteredSpells,
     theme,
     setTheme,

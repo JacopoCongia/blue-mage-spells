@@ -7,11 +7,11 @@ import useSpellsData from "@/hooks/use-spells-data";
 function Navbar() {
   const { spells, setFilteredSpells, theme, setTheme } = useSpellsData();
   const config = [
-    { id: "all", title: "All", position: "first" },
-    { id: "dungeon", title: "Dungeon", position: "" },
-    { id: "raid", title: "Raid", position: "" },
-    { id: "trial", title: "Trial", position: "last" }
-    // { id: "saved", title: "My Spells", position: "last" }
+    { id: "all", title: "All" },
+    { id: "dungeon", title: "Dungeon" },
+    { id: "raid", title: "Raid" },
+    { id: "trial", title: "Trial" },
+    { id: "missing", title: "Missing" }
   ];
 
   return (

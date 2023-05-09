@@ -9,6 +9,7 @@ function RadioSelector({ config }) {
     "peer-checked:bg-indigo-200",
     "dark:peer-checked:bg-indigo-500",
     "px-2",
+    "select-none",
     "text-neutral-800",
     "dark:text-neutral-100",
     "bg-neutral-100",
@@ -30,31 +31,31 @@ function RadioSelector({ config }) {
     includeOnly(value);
   };
 
-  const renderedInputs = config.map((config) => {
+  const renderedInputs = config.map((entry) => {
     const position = () => {
-      if (config.position === "first") {
+      if (config.indexOf(entry) === 0) {
         return "rounded-l";
-      } else if (config.position === "last") {
+      } else if (config.indexOf(entry) === config.length - 1) {
         return "rounded-r";
       } else return "";
     };
 
     return (
-      <div key={config.id}>
+      <div key={entry.id}>
         <input
           className="peer hidden"
           type="radio"
-          id={config.id}
+          id={entry.id}
           name="category"
-          value={config.id}
-          checked={selected.category === config.id}
+          value={entry.id}
+          checked={selected.category === entry.id}
           onChange={handleChange}
         />
         <label
           className={`${classes} ${position()}`}
-          htmlFor={config.id}
+          htmlFor={entry.id}
         >
-          {config.title}
+          {entry.title}
         </label>
       </div>
     );
