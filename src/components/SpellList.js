@@ -19,7 +19,7 @@ function SpellList({ filteredSpells }) {
     <div className="p-5 text-[15px]">
       <table className="w-[100%] table-auto">
         <thead>
-          <tr className="border-b-2 border-neutral-200 dark:border-neutral-700">
+          <tr className="select-none border-b-2 border-neutral-200 dark:border-neutral-700">
             <th className="py-2 w-[40px]">#</th>
             <th></th>
             <th className="text-center">Name</th>
