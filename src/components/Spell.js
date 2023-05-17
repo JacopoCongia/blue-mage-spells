@@ -1,4 +1,3 @@
-import { BsCheckCircle } from "react-icons/bs";
 import useSpellsData from "@/hooks/use-spells-data";
 
 function Spell({ spell, textOnHover, ...rest }) {

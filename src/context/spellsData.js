@@ -6,7 +6,7 @@ const SpellsDataContext = createContext();
 function SpellsDataProvider({ children }) {
   const [spells, setSpells] = useState(data);
   const [filteredSpells, setFilteredSpells] = useState(data);
-  const [savedSpells, setSavedSpells] = useState([]);
+  const [savedSpells, setSavedSpells] = useState([data[0]]);
   const [theme, setTheme] = useState(false);
 
   const missingSpells = spells.filter(
@@ -24,6 +24,12 @@ function SpellsDataProvider({ children }) {
       );
       setFilteredSpells(updatedList);
     }
+  };
+
+  const selectAll = () => {
+    if (savedSpells.length === spells.length) {
+      setSavedSpells([data[0]]);
+    } else setSavedSpells(spells);
   };
 
   const selectSpell = (spell) => {
@@ -52,7 +58,7 @@ function SpellsDataProvider({ children }) {
   useEffect(() => {
     let spellList = JSON.parse(localStorage.getItem("savedSpells"));
     let darkMode = JSON.parse(localStorage.getItem("darkMode"));
-    if (spellList !== [] && spellList !== null) {
+    if (spellList !== [data[0]] && spellList !== null) {
       setSavedSpells(spellList);
     }
     if (darkMode !== false) {
@@ -61,7 +67,7 @@ function SpellsDataProvider({ children }) {
   }, []);
 
   useEffect(() => {
-    if (savedSpells.length > 0) {
+    if (savedSpells.length > 1) {
       localStorage.setItem("savedSpells", JSON.stringify(savedSpells));
     }
     localStorage.setItem("darkMode", JSON.stringify(theme));
@@ -76,7 +82,8 @@ function SpellsDataProvider({ children }) {
     setTheme,
     selectSpell,
     includeOnly,
-    owned
+    owned,
+    selectAll
   };
 
   return (

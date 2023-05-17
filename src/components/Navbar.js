@@ -5,7 +5,8 @@ import SpellSearch from "./SpellSearch";
 import useSpellsData from "@/hooks/use-spells-data";
 
 function Navbar() {
-  const { spells, setFilteredSpells, theme, setTheme } = useSpellsData();
+  const { spells, setFilteredSpells, savedSpells, theme, setTheme, selectAll } =
+    useSpellsData();
   const config = [
     { id: "all", title: "All" },
     { id: "dungeon", title: "Dungeon" },
@@ -23,6 +24,12 @@ function Navbar() {
       <div className="mx-auto">
         <RadioSelector config={config} />
       </div>
+      <button
+        onClick={selectAll}
+        className="mx-auto h-7 flex items-center bg-neutral-100 text-neutral-800 dark:text-neutral-100 hover:bg-indigo-100 dark:hover:bg-indigo-400 px-3 rounded dark:bg-neutral-800"
+      >
+        {savedSpells.length === spells.length ? "Deselect All" : "Select All"}
+      </button>
       <div className="">
         {!theme ? (
           <div className="flex items-center gap-2 ml-auto">
