@@ -9,7 +9,6 @@ function SpellList({ filteredSpells }) {
       <Spell
         key={spell.id}
         spell={spell}
-        textOnHover="Add to My Spells"
         onClick={() => selectSpell(spell)}
       />
     );
