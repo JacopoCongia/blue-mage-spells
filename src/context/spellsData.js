@@ -9,6 +9,8 @@ function SpellsDataProvider({ children }) {
   const [savedSpells, setSavedSpells] = useState([data[0]]);
   const [theme, setTheme] = useState(false);
   const [changed, setChanged] = useState(false);
+  const [selected, setSelected] = useState({ category: "all" });
+  const [searchField, setSearchField] = useState(false);
 
   const missingSpells = spells.filter(
     ({ id: id1 }) => !savedSpells.some(({ id: id2 }) => id2 === id1)
@@ -37,8 +39,6 @@ function SpellsDataProvider({ children }) {
     } else setSavedSpells(spells);
     update();
   };
-
-  console.log(changed);
 
   const selectSpell = (spell) => {
     const saved = savedSpells.some((el) => el.id === spell.id);
@@ -82,6 +82,14 @@ function SpellsDataProvider({ children }) {
     localStorage.setItem("darkMode", JSON.stringify(theme));
   }, [savedSpells, theme]);
 
+  useEffect(() => {
+    if (selected.category !== "all") {
+      setSelected((prevSelected) => {
+        return { ...prevSelected, category: "all" };
+      });
+    }
+  }, [searchField]);
+
   const valuesToShare = {
     spells,
     filteredSpells,
@@ -92,7 +100,11 @@ function SpellsDataProvider({ children }) {
     selectSpell,
     includeOnly,
     owned,
-    selectAll
+    selectAll,
+    searchField,
+    setSearchField,
+    selected,
+    setSelected
   };
 
   return (

@@ -2,6 +2,7 @@ import { useState } from "react";
 import useSpellsData from "@/hooks/use-spells-data";
 
 function SpellSearch({ spells, setFilteredSpells }) {
+  const { searcField, setSearchField } = useSpellsData();
   const [term, setTerm] = useState("");
 
   const handleSubmit = (event) => {
@@ -13,6 +14,9 @@ function SpellSearch({ spells, setFilteredSpells }) {
     setTerm(event.target.value);
     if (!event.target.value) {
       setFilteredSpells(spells);
+      setSearchField(false);
+    } else {
+      setSearchField(true);
     }
 
     const updatedSpells = spells.filter(
