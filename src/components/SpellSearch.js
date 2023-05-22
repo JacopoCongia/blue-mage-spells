@@ -30,7 +30,7 @@ function SpellSearch({ spells, setFilteredSpells }) {
   return (
     <form onSubmit={handleSubmit}>
       <input
-        className="w-[300px] rounded p-2 text-black bg-blue-50 focus:outline-none"
+        className="w-[300px] rounded border-none h-[39px] px-3 text-black bg-blue-50 focus:outline-none"
         onChange={handleSearchChange}
         value={term}
         placeholder="Search by number or name..."

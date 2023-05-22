@@ -13,7 +13,8 @@ function RadioSelector({ config }) {
     "dark:text-neutral-100",
     "bg-neutral-100",
     "dark:bg-neutral-800",
-    "py-2",
+    "py-[10px]",
+    "px-[14px]",
     "hover:bg-indigo-100",
     "dark:hover:bg-indigo-400",
     "cursor-pointer"
