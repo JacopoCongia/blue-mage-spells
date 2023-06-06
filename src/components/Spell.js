@@ -51,8 +51,8 @@ function Spell({ spell, textOnHover, ...rest }) {
           />
         </td>
         <td className="text-center font-medium">{spell.name}</td>
-        <td className="text-center">{updatedSources}</td>
-        <td className="max-w-[400px] text-center hidden md:table-cell">
+        <td className="text-center hidden sm:table-cell">{updatedSources}</td>
+        <td className="max-w-[400px] text-center hidden lg:table-cell">
           {updatedDescription}
         </td>
         <td className="text-center hidden lg:table-cell">{rating()}</td>

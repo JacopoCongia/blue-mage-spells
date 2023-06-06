@@ -16,7 +16,7 @@ function Navbar() {
   ];
 
   return (
-    <div className="flex justify-evenly items-center bg-indigo-400 dark:bg-indigo-900 p-5">
+    <div className="flex w-[100%] justify-evenly items-center bg-indigo-400 dark:bg-indigo-900 p-5">
       <SpellSearch
         spells={spells}
         setFilteredSpells={setFilteredSpells}

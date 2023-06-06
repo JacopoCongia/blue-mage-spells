@@ -22,10 +22,10 @@ function SpellList({ filteredSpells }) {
             <th className="py-2 w-[40px]">#</th>
             <th></th>
             <th className="text-center">Name</th>
-            <th className="text-center">Learned From</th>
-            <th className="text-center hidden md:table-cell">Description</th>
+            <th className="text-center hidden sm:table-cell">Learned From</th>
+            <th className="text-center hidden lg:table-cell">Description</th>
             <th className="text-center hidden lg:table-cell">Rating</th>
-            <th className="">
+            <th className="hidden sm:table-cell whitespace-nowrap">
               {savedSpells.length} / {spells.length}
             </th>
           </tr>

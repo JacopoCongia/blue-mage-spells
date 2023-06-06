@@ -62,7 +62,9 @@ function RadioSelector({ config }) {
   });
 
   return (
-    <fieldset className="text-neutral-100 flex">{renderedInputs}</fieldset>
+    <fieldset className="hidden text-neutral-100 md:flex">
+      {renderedInputs}
+    </fieldset>
   );
 }
 
