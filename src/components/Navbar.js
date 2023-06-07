@@ -16,17 +16,28 @@ function Navbar() {
   ];
 
   return (
-    <div className="flex w-[100%] justify-evenly items-center bg-indigo-400 dark:bg-indigo-900 p-5">
+    <div className="p-[1.5em] flex gap-5 justify-around items-center bg-indigo-400 dark:bg-indigo-900">
       <SpellSearch
         spells={spells}
         setFilteredSpells={setFilteredSpells}
       />
-      <div className="mx-5">
-        <RadioSelector config={config} />
-      </div>
+      <RadioSelector config={config} />
       <button
         onClick={selectAll}
-        className="mr-auto whitespace-nowrap h-[40px] px-[14px] bg-neutral-100 text-neutral-800 dark:text-neutral-100 hover:bg-indigo-100 dark:hover:bg-indigo-400 rounded dark:bg-neutral-800"
+        className="
+          md:mr-auto 
+          py-[0.5em] 
+          px-[5em]
+          md:px-[2em]
+          rounded 
+          whitespace-nowrap
+          bg-neutral-100
+          dark:bg-neutral-800
+          text-neutral-800 
+          dark:text-neutral-100 
+          hover:bg-indigo-100 
+          dark:hover:bg-indigo-400 
+        "
       >
         {savedSpells.length === spells.length ? "Deselect All" : "Select All"}
       </button>
