@@ -19,10 +19,12 @@ function SpellList({ filteredSpells }) {
       <table className="w-[100%] table-auto">
         <thead>
           <tr className="select-none border-b-2 border-neutral-200 dark:border-neutral-700">
-            <th className="py-2 w-[40px]">#</th>
+            <th className="py-2 text-[1.5rem] sm:text-[1rem]">#</th>
             <th></th>
-            <th className="text-center">Name</th>
-            <th className="text-center hidden sm:table-cell">Learned From</th>
+            <th className="text-center text-[1.5rem] sm:text-[1rem]">Name</th>
+            <th className="text-center text-[1.5rem] sm:text-[1rem]">
+              Learned From
+            </th>
             <th className="text-center hidden lg:table-cell">Description</th>
             <th className="text-center hidden lg:table-cell">Rating</th>
             <th className="hidden sm:table-cell whitespace-nowrap">

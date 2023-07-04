@@ -43,15 +43,28 @@ function Spell({ spell, textOnHover, ...rest }) {
         border-neutral-200 dark:border-neutral-700 
         ${selected}`}
       >
-        <td className="py-5 text-center">{spell.order}</td>
+        <td
+          className="
+          py-10 
+          sm:py-5 
+          text-center 
+          text-[1.25rem] 
+          sm:text-[1rem]"
+        >
+          {spell.order}
+        </td>
         <td>
           <img
             className="min-w-[42px]"
             src={spell.icon}
           />
         </td>
-        <td className="text-center font-medium">{spell.name}</td>
-        <td className="text-center hidden sm:table-cell">{updatedSources}</td>
+        <td className="text-center font-medium text-[1.25rem] sm:text-[1rem]">
+          {spell.name}
+        </td>
+        <td className="text-center text-[1.25rem] sm:text-[1rem]">
+          {updatedSources}
+        </td>
         <td className="max-w-[400px] text-center hidden lg:table-cell">
           {updatedDescription}
         </td>
