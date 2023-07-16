@@ -19,14 +19,20 @@ function SpellList({ filteredSpells }) {
       <table className="w-[100%] table-auto">
         <thead>
           <tr className="select-none border-b-2 border-neutral-200 dark:border-neutral-700">
-            <th className="py-2 text-[1.5rem] sm:text-[1rem]">#</th>
-            <th></th>
-            <th className="text-center text-[1.5rem] sm:text-[1rem]">Name</th>
-            <th className="text-center text-[1.5rem] sm:text-[1rem]">
+            <th className="py-2 text-[1.5rem] sm:text-[1rem] w-[5%]">#</th>
+            <th className="w-[10%]"></th>
+            <th className="w-[20%] text-left pl-[1em] text-[1.5rem] sm:text-[1rem]">
+              Name
+            </th>
+            <th className="w-[25%] text-left pl-[1em] text-[1.5rem] sm:text-[1rem]">
               Learned From
             </th>
-            <th className="text-center hidden lg:table-cell">Description</th>
-            <th className="text-center hidden lg:table-cell">Rating</th>
+            <th className="text-left pl-[1em] hidden lg:table-cell">
+              Description
+            </th>
+            <th className="w-[5%] text-left pl-[2em] hidden lg:table-cell">
+              Rating
+            </th>
             <th className="hidden sm:table-cell whitespace-nowrap">
               {savedSpells.length} / {spells.length}
             </th>

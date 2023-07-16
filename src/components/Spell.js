@@ -55,20 +55,20 @@ function Spell({ spell, textOnHover, ...rest }) {
         </td>
         <td>
           <img
-            className="min-w-[42px]"
+            className="min-w-[42px] pl-[2em]"
             src={spell.icon}
           />
         </td>
-        <td className="text-center font-medium text-[1.25rem] sm:text-[1rem]">
+        <td className="text-left pl-[1em] font-medium text-[1.25rem] sm:text-[1rem]">
           {spell.name}
         </td>
-        <td className="text-center text-[1.25rem] sm:text-[1rem]">
+        <td className="text-left pl-[1em] text-[1.25rem] sm:text-[1rem]">
           {updatedSources}
         </td>
-        <td className="max-w-[400px] text-center hidden lg:table-cell">
+        <td className="max-w-[350px] pl-[1em] text-left hidden lg:table-cell">
           {updatedDescription}
         </td>
-        <td className="text-center hidden lg:table-cell">{rating()}</td>
+        <td className="text-left pl-[2em] hidden lg:table-cell">{rating()}</td>
         <td></td>
       </tr>
     </>
