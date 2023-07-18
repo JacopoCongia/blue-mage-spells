@@ -1,11 +1,20 @@
 import { createContext, useState, useEffect, useRef } from "react";
 import data from "@/data";
+import fetchSpells from "@/fetchSpells";
 
 const SpellsDataContext = createContext();
 
 function SpellsDataProvider({ children }) {
-  const [spells, setSpells] = useState(data);
-  const [filteredSpells, setFilteredSpells] = useState(data);
+  const [spells, setSpells] = useState(
+    data.sort((a, b) => {
+      return a.order - b.order;
+    })
+  );
+  const [filteredSpells, setFilteredSpells] = useState(
+    data.sort((a, b) => {
+      return a.order - b.order;
+    })
+  );
   const [savedSpells, setSavedSpells] = useState([data[0]]);
   const [theme, setTheme] = useState(false);
   const [selected, setSelected] = useState({ category: "all" });
@@ -16,6 +25,8 @@ function SpellsDataProvider({ children }) {
   const missingSpells = spells.filter(
     ({ id: id1 }) => !savedSpells.some(({ id: id2 }) => id2 === id1)
   );
+
+  fetchSpells();
 
   const includeOnly = (name) => {
     if (name === "all") {

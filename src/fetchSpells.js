@@ -1,8 +1,8 @@
-import axios from "axios";
-
 const fetchSpells = async () => {
-  const response = await axios.get("https://ffxivcollect.com/api/spells");
-  return response.data.results;
+  const response = await fetch("https://ffxivcollect.com/api/spells");
+  const data = await response.json();
+
+  console.log(data);
 };
 
 export default fetchSpells;
