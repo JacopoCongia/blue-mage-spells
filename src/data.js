@@ -3500,7 +3500,7 @@ const data = [
     sources: [
       {
         type: "Other",
-        text: "Placeholder: Possibly Totems",
+        text: "Placeholder: Whalaqee Totem",
         related_type: null,
         related_id: null
       }
@@ -3732,7 +3732,7 @@ const data = [
     sources: [
       {
         type: "Other",
-        text: "Placeholder: possibly totems?",
+        text: "Placeholder: Whalaqee Totem",
         related_type: null,
         related_id: null
       }
