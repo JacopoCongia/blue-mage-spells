@@ -3500,7 +3500,7 @@ const data = [
     sources: [
       {
         type: "Other",
-        text: "Placeholder: Whalaqee Totem",
+        text: "Learn 120 Spells - Whalaqee Totem",
         related_type: null,
         related_id: null
       }
@@ -3732,7 +3732,7 @@ const data = [
     sources: [
       {
         type: "Other",
-        text: "Placeholder: Whalaqee Totem",
+        text: "Level 80 - Whalaqee Totem",
         related_type: null,
         related_id: null
       }
@@ -3760,7 +3760,7 @@ const data = [
     sources: [
       {
         type: "Other",
-        text: "Placeholder: possibly armadillos in Amh Araeng / Amh Araeng",
+        text: "Slippery Armadillo / Amh Araeng (32, 9)",
         related_type: null,
         related_id: null
       }
@@ -3789,7 +3789,7 @@ const data = [
     sources: [
       {
         type: "Other",
-        text: "Placeholder: possibly armadillos in Amh Araeng / Amh Araeng",
+        text: "Long-tailed Armadillo / Amh Araeng (17, 30)",
         related_type: null,
         related_id: null
       }
@@ -3847,7 +3847,7 @@ const data = [
     sources: [
       {
         type: "Other",
-        text: "Hobgoblin / Kholusia (37.5, 29)",
+        text: "Hobgoblin / Kholusia (37, 29)",
         related_type: null,
         related_id: null
       }
