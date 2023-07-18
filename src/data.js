@@ -3847,7 +3847,7 @@ const data = [
     sources: [
       {
         type: "Other",
-        text: "Placeholder: possibly hobgoblins in Kholusia / Kholusia",
+        text: "Hobgoblin / Kholusia (37.5, 29)",
         related_type: null,
         related_id: null
       }
