@@ -3273,6 +3273,585 @@ const data = [
         related_id: null
       }
     ]
+  },
+  {
+    id: 124,
+    name: "Being Mortal",
+    description:
+      "Deals unaspected damage to all nearby enemies with a potency of 800 for the first enemy, and 50% less for all remaining enemies.\nShares a recast timer with **Apokalypsis**.",
+    tooltip:
+      "The faerie king Titania's signature move, this spell embodies the disdain, pity, and delight that men's fleeting lives inspire in the fae folk. By weaving layers upon layers of runes to create a deadly maelstrom of magic, you too can remind others of their mortality...until you inevitably meet your own demise.",
+    order: 124,
+    rank: 5,
+    patch: "6.45",
+    owned: false,
+    icon: "https://ffxivcollect.com/images/spells/124.png",
+    type: {
+      id: 1,
+      name: "Magic"
+    },
+    aspect: {
+      id: 4,
+      name: "None"
+    },
+    sources: [
+      {
+        type: "Trial",
+        text: "Titania / The Dancing Plague",
+        related_type: null,
+        related_id: null
+      }
+    ]
+  },
+  {
+    id: 123,
+    name: "Apokalypsis",
+    description:
+      "Delivers damage over time with a potency of 140 to all enemies in a straight line before you.\n**Duration:** 10s\nEffect ends upon using another action or moving (including facing a different direction).\nShares a recast timer with **Being Mortal**.",
+    tooltip:
+      "While magic is ordinarily woven with words and symbols, this spell employed by the dread creation Therion harnesses the power of emotion to beget destruction. It is said that, if one can cling to the desire for oblivion, it is possible to sustain the ruinous effect indefinitely.",
+    order: 123,
+    rank: 5,
+    patch: "6.45",
+    owned: false,
+    icon: "https://ffxivcollect.com/images/spells/123.png",
+    type: {
+      id: 1,
+      name: "Magic"
+    },
+    aspect: {
+      id: 4,
+      name: "None"
+    },
+    sources: [
+      {
+        type: "Dungeon",
+        text: "Therion / Amaurot",
+        related_type: null,
+        related_id: null
+      }
+    ]
+  },
+  {
+    id: 122,
+    name: "Sea Shanty",
+    description:
+      "Deals water damage with a potency of 500 to all nearby enemies.\n**Additional Effect:** Potency increases to 1,000 during rain, showers, and thunderstorms",
+    tooltip:
+      "Part of the nixie's watery repertoire, this technique sends a swirling deluge crashing over enemies─rather too rough for its original purpose of delighting children, but it makes a fine addition to the blue mage's arsenal.",
+    order: 122,
+    rank: 5,
+    patch: "6.45",
+    owned: false,
+    icon: "https://ffxivcollect.com/images/spells/122.png",
+    type: {
+      id: 1,
+      name: "Magic"
+    },
+    aspect: {
+      id: 3,
+      name: "Water"
+    },
+    sources: [
+      {
+        type: "Dungeon",
+        text: "Nixie / Matoya's Relict",
+        related_type: null,
+        related_id: null
+      }
+    ]
+  },
+  {
+    id: 121,
+    name: "Mortal Flame",
+    description:
+      "Deals fire damage over time with a potency of 40.\nOnly one effect inflicted by this action can be active at a time.\nHas no effect on targets outside of combat.\nEffect ends upon target leaving combat.",
+    tooltip:
+      "In battle, the familiar Lugus used this technique to create a veritable conflagration. That power is now yours to wield...albeit at a greatly diminished strength. Not wishing to be responsible for burning entire cities down, the Blue Mages' Guild opted to limit the flame's intensity to a gentle sear.",
+    order: 121,
+    rank: 3,
+    patch: "6.45",
+    owned: false,
+    icon: "https://ffxivcollect.com/images/spells/121.png",
+    type: {
+      id: 1,
+      name: "Magic"
+    },
+    aspect: {
+      id: 7,
+      name: "Fire"
+    },
+    sources: [
+      {
+        type: "Dungeon",
+        text: "Lugus / The Grand Cosmos",
+        related_type: null,
+        related_id: null
+      }
+    ]
+  },
+  {
+    id: 120,
+    name: "Candy Cane",
+    description:
+      "Deals unaspected damage to target and all enemies nearby it with a potency of 250 for the first enemy, and 50% less for all remaining enemies.\n**Additional Effect:** Lowers strength and dexterity attributes of target by 10%\n**Duration:** 10s\n**Additional Effect:** Restores 10% of maximum MP\nShares a recast timer with **Magic Hammer**.",
+    tooltip:
+      "Loosely based upon Aenc Thon's technique, which saw him wallop foes with a candy cane, this spell sweetens any duel with a rain of confections. The Fuath leader, for one, would not be averse to mages thus spreading the love.",
+    order: 120,
+    rank: 2,
+    patch: "6.45",
+    owned: false,
+    icon: "https://ffxivcollect.com/images/spells/120.png",
+    type: {
+      id: 1,
+      name: "Magic"
+    },
+    aspect: {
+      id: 4,
+      name: "None"
+    },
+    sources: [
+      {
+        type: "Dungeon",
+        text: "Aenc Thon / Dohn Mheg",
+        related_type: null,
+        related_id: null
+      }
+    ]
+  },
+  {
+    id: 119,
+    name: "Laser Eye",
+    description:
+      "Deals unaspected damage to target and all enemies nearby it with a potency of 220 for the first enemy, and 50% less for all remaining enemies.\n**Additional Effect:** 5-yalm knockback",
+    tooltip:
+      "Inspired by Eden's Promise, this spell uses the eyes as arcane circles through which aether is channeled─a principle also seen in techniques such as Glower. So concentrated in energy is the beam, it explodes upon contact. Chirurgeon's warning: excessive use may lead to chronic dry eyes.",
+    order: 119,
+    rank: 3,
+    patch: "6.45",
+    owned: false,
+    icon: "https://ffxivcollect.com/images/spells/119.png",
+    type: {
+      id: 1,
+      name: "Magic"
+    },
+    aspect: {
+      id: 4,
+      name: "None"
+    },
+    sources: [
+      {
+        type: "Raid",
+        text: "Eden's Promise / Eden's Promise: Eternity",
+        related_type: null,
+        related_id: null
+      }
+    ]
+  },
+  {
+    id: 118,
+    name: "Winged Reprobation",
+    description:
+      "Deals physical damage to all enemies in a straight line before you with a potency of 300 for the first enemy, and 50% less for all remaining enemies.\n**Additional Effect:** Grants one stack of **Winged Reprobation** and resets this action's recast timer\n**Maximum Stacks:** 4\nExecution at 3 stacks increases potency to 400 and grants one stack of **Winged Reprobation**, but recast timer will not be reset.\nAt maximum stacks, **Winged Reprobation** changes to **Winged Redemption**.\n**Winged Redemption Effect:** Increases the potency of **Conviction Marcato**\n**Duration:** 10s\nThis action does not share a recast timer with any other actions.",
+    tooltip:
+      "This imitation of the Lightwarden Innocence's technique conjures up swords of Light that rain down from the heavens. Rumor has it Lord Vauthry used the technique to turn sin eaters into meol, which may explain why it appears to bring the caster closer to his perfection.",
+    order: 118,
+    rank: 3,
+    patch: "6.45",
+    owned: false,
+    icon: "https://ffxivcollect.com/images/spells/118.png",
+    type: {
+      id: 2,
+      name: "Physical"
+    },
+    aspect: {
+      id: 8,
+      name: "Piercing"
+    },
+    sources: [
+      {
+        type: "Trial",
+        text: "Lightwarden Innocence / The Crown Of The Immaculate",
+        related_type: null,
+        related_id: null
+      }
+    ]
+  },
+  {
+    id: 117,
+    name: "Force Field",
+    description:
+      "Grants either **Physical Vulnerability Down** or **Magic Vulnerability Down**.\n**Duration:** 10s\n**Physical Vulnerability Down Effect:** Reduces physical damage taken by 50%\n**Magic Vulnerability Down Effect:** Reduces magic damage taken by 50%\nThis action does not share a recast timer with any other actions.",
+    tooltip:
+      "Originally employed by Sephirot, the Fiend, to render foes vulnerable to attacks, this spell has been adapted for the mage's own protection. Due to the field's intrinsic instability, however, it cannot simultaneously grant physical and magical benefits, only one or the other.",
+    order: 117,
+    rank: 3,
+    patch: "6.45",
+    owned: false,
+    icon: "https://ffxivcollect.com/images/spells/117.png",
+    type: {
+      id: 1,
+      name: "Magic"
+    },
+    aspect: {
+      id: 4,
+      name: "None"
+    },
+    sources: [
+      {
+        type: "Other",
+        text: "Placeholder: Possibly Totems",
+        related_type: null,
+        related_id: null
+      }
+    ]
+  },
+  {
+    id: 116,
+    name: "Conviction Marcato",
+    description:
+      "Deals unaspected damage to all enemies in a straight line before you with a potency of 220 for the first enemy, and 50% less for all remaining enemies.\nPotency is increased to 440 when you are under the effect of **Winged Redemption**.",
+    tooltip:
+      "Learned from the forgiven obscenity, this technique unleashes a beam of Light-aligned aether at opponents. Lest the responsible mage worry, being a scaled-down recreation, the spell does not possess the potency to transform living beings into sin eaters.",
+    order: 116,
+    rank: 3,
+    patch: "6.45",
+    owned: false,
+    icon: "https://ffxivcollect.com/images/spells/116.png",
+    type: {
+      id: 1,
+      name: "Magic"
+    },
+    aspect: {
+      id: 4,
+      name: "None"
+    },
+    sources: [
+      {
+        type: "Dungeon",
+        text: "Forgiven Obscenity / Mt. Gulg",
+        related_type: null,
+        related_id: null
+      }
+    ]
+  },
+  {
+    id: 115,
+    name: "Dimensional Shift",
+    description:
+      "Delivers an attack to all nearby enemies dealing damage equal to 30% of their current HP.\nHas no effect on enemies whose level is higher than your own.",
+    tooltip:
+      "Employed by Eden Prime, this technique shifts the fabric of reality to trigger a powerful aetheric surge. While it inflicts considerable damage, it demands an extended casting period so as to allow mages to raise a protective barrier over themselves.",
+    order: 115,
+    rank: 4,
+    patch: "6.45",
+    owned: false,
+    icon: "https://ffxivcollect.com/images/spells/115.png",
+    type: {
+      id: 1,
+      name: "Magic"
+    },
+    aspect: {
+      id: 4,
+      name: "None"
+    },
+    sources: [
+      {
+        type: "Raid",
+        text: "Eden Prime / Eden's Gate: Resurrection",
+        related_type: null,
+        related_id: null
+      }
+    ]
+  },
+  {
+    id: 114,
+    name: "Divination Rune",
+    description:
+      "Deals unaspected damage with a potency of 100 to all enemies in a cone before you.\n**Additional Effect:** Restores MP",
+    tooltip:
+      "The language of the fae folk is composed of runes, symbols that harbor magic, and the faerie king Titania was partial to this one. When invoked, it emits an aetheric wave that resonates with the target's magical energies, making them surpassingly easy to extract.",
+    order: 114,
+    rank: 4,
+    patch: "6.45",
+    owned: false,
+    icon: "https://ffxivcollect.com/images/spells/114.png",
+    type: {
+      id: 1,
+      name: "Magic"
+    },
+    aspect: {
+      id: 4,
+      name: "None"
+    },
+    sources: [
+      {
+        type: "Trial",
+        text: "Titania / The Dancing Plague",
+        related_type: null,
+        related_id: null
+      }
+    ]
+  },
+  {
+    id: 113,
+    name: "Ruby Dynamics",
+    description:
+      "Deals physical damage with a potency of 220 to all enemies before you.\nShares a recast timer with **Chelonian Gate** and **The Rose of Destruction**.",
+    tooltip:
+      "In order to extend its claws for a near-inescapable strike, the Ruby Weapon transforms energy generated by its advanced dynamo unit. Albeit on a smaller scale, the mage recreates this technique by channeling aether into numerous razor-sharp aetherial blades.",
+    order: 113,
+    rank: 4,
+    patch: "6.45",
+    owned: false,
+    icon: "https://ffxivcollect.com/images/spells/113.png",
+    type: {
+      id: 2,
+      name: "Physical"
+    },
+    aspect: {
+      id: 9,
+      name: "Slashing"
+    },
+    sources: [
+      {
+        type: "Trial",
+        text: "The Ruby Weapon / Cinder Drift",
+        related_type: null,
+        related_id: null
+      }
+    ]
+  },
+  {
+    id: 112,
+    name: "Deep Clean",
+    description:
+      "Deals physical damage to all nearby enemies with a potency of 220 for the first enemy, and 50% less for all remaining enemies.\n**Additional Effect:** Grants one stack of **Spick-and-span** for each enemy afflicted with **Begrimed**. The **Begrimed** effect is also removed.\n**Maximum Stacks:** 6\n**Spick-and-span Effect:** **Regen**\n**Cure Potency:** 50\nCure potency increases up to 300 based on your accumulated stacks of **Spick-and-span**.\n**Duration:** 15s\nAdditional stacks of **Spick-and-span** accumulated while the effect is active will not affect duration.",
+    tooltip:
+      "Taking a spotless page from the Seeker of Solitude, this spell summons forth a magicked broom to sweep the area clean. Each mud stain it removes serves to affirm its self-worth, and it imparts that sense of well-being to the caster.",
+    order: 112,
+    rank: 3,
+    patch: "6.45",
+    owned: false,
+    icon: "https://ffxivcollect.com/images/spells/112.png",
+    type: {
+      id: 2,
+      name: "Physical"
+    },
+    aspect: {
+      id: 2,
+      name: "Blunt"
+    },
+    sources: [
+      {
+        type: "Dungeon",
+        text: "Seeker Of Solitude / The Grand Cosmos",
+        related_type: null,
+        related_id: null
+      }
+    ]
+  },
+  {
+    id: 111,
+    name: "Peat Pelt",
+    description:
+      "Deals earth damage to target and all enemies nearby it with a potency of 100 for the first enemy, and 50% less for all remaining enemies.\n**Additional Effect:** Afflicts target with **Begrimed**\n**Begrimed Effect:** Earth damage over time\n**Potency:** 10\n**Duration:** 9s",
+    tooltip:
+      "Taking a filthy page from the mudman, this spell coalesces earth-aspected aether into a clump of mud, which is hurled at enemies. Those who are struck bear stubborn mud stains that diminish their self-worth, causing a lingering enervation.",
+    order: 111,
+    rank: 2,
+    patch: "6.45",
+    owned: false,
+    icon: "https://ffxivcollect.com/images/spells/111.png",
+    type: {
+      id: 1,
+      name: "Magic"
+    },
+    aspect: {
+      id: 6,
+      name: "Earth"
+    },
+    sources: [
+      {
+        type: "Dungeon",
+        text: "Mudman / Matoya's Relict",
+        related_type: null,
+        related_id: null
+      }
+    ]
+  },
+  {
+    id: 110,
+    name: "Wild Rage",
+    description:
+      "Deals physical damage to all nearby enemies with a potency of 500 for the first enemy, and 50% less for all remaining enemies.\nConsumes 50% of your maximum HP when executed.",
+    tooltip:
+      "Embracing rage in the fashion of the spectral berserker allows one to unleash an unbridled wave of destruction. As many a parable will attest, however, anger is a double-edged sword; the spell consumes a great deal of energy, and the caster is advised to be wary of untimely exhaustion.",
+    order: 110,
+    rank: 4,
+    patch: "6.45",
+    owned: false,
+    icon: "https://ffxivcollect.com/images/spells/110.png",
+    type: {
+      id: 2,
+      name: "Physical"
+    },
+    aspect: {
+      id: 2,
+      name: "Blunt"
+    },
+    sources: [
+      {
+        type: "Dungeon",
+        text: "Spectral Berserker / The Heroes' Gauntlet",
+        related_type: null,
+        related_id: null
+      }
+    ]
+  },
+  {
+    id: 109,
+    name: "Breath Of Magic",
+    description:
+      "Deals unaspected damage over time with a potency of 120 to all enemies in a cone before you.\n**Duration: **60s\nOnly one effect inflicted by this action can be active at a time.",
+    tooltip:
+      "Acquired from a species of crustacean native to the New World, this spell is executed by blending aether of multiple aspects and unleashing it in one fell blast. This has the effect of disrupting the target's aetheric balance, thereby gradually robbing them of vigor.",
+    order: 109,
+    rank: 3,
+    patch: "6.45",
+    owned: false,
+    icon: "https://ffxivcollect.com/images/spells/109.png",
+    type: {
+      id: 1,
+      name: "Magic"
+    },
+    aspect: {
+      id: 4,
+      name: "None"
+    },
+    sources: [
+      {
+        type: "Other",
+        text: "Placeholder: possibly totems?",
+        related_type: null,
+        related_id: null
+      }
+    ]
+  },
+  {
+    id: 108,
+    name: "Rehydration",
+    description: "Restores own HP.\n**Cure Potency:** 600",
+    tooltip:
+      "Particularly savvy armadillos are capable of healing themselves by drawing upon the moisture in the air, and by imitating this behavior, mages can enjoy the selfsame benefits─including flawless skin.",
+    order: 108,
+    rank: 1,
+    patch: "6.45",
+    owned: false,
+    icon: "https://ffxivcollect.com/images/spells/108.png",
+    type: {
+      id: 1,
+      name: "Magic"
+    },
+    aspect: {
+      id: 4,
+      name: "None"
+    },
+    sources: [
+      {
+        type: "Other",
+        text: "Placeholder: possibly armadillos in Amh Araeng / Amh Araeng",
+        related_type: null,
+        related_id: null
+      }
+    ]
+  },
+  {
+    id: 107,
+    name: "Schiltron",
+    description:
+      "Counters enemies with unaspected damage every time you suffer physical damage.\n**Counter Potency:** 50\n**Duration:** 15s\nPotency is increased to 100 when you are under the effect of **Aetheric Mimicry: Tank**.\nEffect cannot be stacked with **Veil of the Whorl** or **Ice Spikes**.",
+    tooltip:
+      "Certain species of armadillo have learned to channel aether into their shells, thus granting them the hardness of metal. A similar stratagem allows the blue mage to reflect physical blows back upon an attacker─though unfortunately, both armadillo and man still feel the intial, teeth-rattling impact.",
+    order: 107,
+    rank: 1,
+    patch: "6.45",
+    owned: false,
+    icon: "https://ffxivcollect.com/images/spells/107.png",
+    type: {
+      id: 1,
+      name: "Magic"
+    },
+    aspect: {
+      id: 4,
+      name: "None"
+    },
+    sources: [
+      {
+        type: "Other",
+        text: "Placeholder: possibly armadillos in Amh Araeng / Amh Araeng",
+        related_type: null,
+        related_id: null
+      }
+    ]
+  },
+  {
+    id: 106,
+    name: "Right Round",
+    description:
+      "Deals physical damage with a potency of 110 to all nearby enemies.\n**Additional Effect:** 10-yalm knockback to all enemies and party members in range\nCannot be used outside of combat or when target is suffering from certain enfeeblements.",
+    tooltip:
+      "This spell recreates the devastating way in which the greater armadillo swings an enormous boulder in its clawed tail like a flail. A boulder is conjured from aether and similarly swung at great speed, sending all nearby flying.",
+    order: 106,
+    rank: 2,
+    patch: "6.45",
+    owned: false,
+    icon: "https://ffxivcollect.com/images/spells/106.png",
+    type: {
+      id: 2,
+      name: "Physical"
+    },
+    aspect: {
+      id: 2,
+      name: "Blunt"
+    },
+    sources: [
+      {
+        type: "Dungeon",
+        text: "Greater Armadillo / Malikah's Well",
+        related_type: null,
+        related_id: null
+      }
+    ]
+  },
+  {
+    id: 105,
+    name: "Goblin Punch",
+    description:
+      "Deals physical damage with a potency of 120.\n220 when executed in front of a target.\nPotency is increased to 220 when you are under the effect of **Mighty Guard**.\n320 when executed in front of a target while you are under the effect of **Mighty Guard**.",
+    tooltip:
+      "Favored by hobgoblins, this time-honored technique operates on the premise of “beating 'em senseless.” Blue mages strengthen the attack by channeling magic into their fists, which come to harbor even greater pummeling potential when coupled with the stones to face one's foe head-on.",
+    order: 105,
+    rank: 1,
+    patch: "6.45",
+    owned: false,
+    icon: "https://ffxivcollect.com/images/spells/105.png",
+    type: {
+      id: 2,
+      name: "Physical"
+    },
+    aspect: {
+      id: 2,
+      name: "Blunt"
+    },
+    sources: [
+      {
+        type: "Other",
+        text: "Placeholder: possibly hobgoblins in Kholusia / Kholusia",
+        related_type: null,
+        related_id: null
+      }
+    ]
   }
 ];
 
