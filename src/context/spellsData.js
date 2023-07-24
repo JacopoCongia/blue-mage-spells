@@ -1,6 +1,5 @@
 import { createContext, useState, useEffect, useRef } from "react";
 import data from "@/data";
-import fetchSpells from "@/fetchSpells";
 
 const SpellsDataContext = createContext();
 
@@ -26,13 +25,16 @@ function SpellsDataProvider({ children }) {
     ({ id: id1 }) => !savedSpells.some(({ id: id2 }) => id2 === id1)
   );
 
-  fetchSpells();
-
   const includeOnly = (name) => {
     if (name === "all") {
       setFilteredSpells(spells);
     } else if (name === "missing") {
       setFilteredSpells(missingSpells);
+    } else if (name === "new") {
+      const onlyNewSpells = spells.filter((s) => {
+        return s.patch === "6.45";
+      });
+      setFilteredSpells(onlyNewSpells);
     } else if (name === "dungeon" || "trial" || "raid") {
       const updatedList = spells.filter((spell) =>
         spell.sources.some((el) => el.type.toLowerCase() === name.toLowerCase())

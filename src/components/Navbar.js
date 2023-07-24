@@ -12,7 +12,8 @@ function Navbar() {
     { id: "dungeon", title: "Dungeon" },
     { id: "raid", title: "Raid" },
     { id: "trial", title: "Trial" },
-    { id: "missing", title: "Missing" }
+    { id: "missing", title: "Missing" },
+    { id: "new", title: "*New*" }
   ];
 
   return (
