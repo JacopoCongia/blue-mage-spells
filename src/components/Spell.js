@@ -57,6 +57,10 @@ function Spell({ spell, textOnHover, ...rest }) {
           <img
             className="min-w-[42px] pl-[2em]"
             src={spell.icon}
+            alt="An icon for the spell"
+            loading="lazy"
+            decoding="async"
+            referrerPolicy="no-referrer"
           />
         </td>
         <td className="text-left pl-[1em] font-medium text-[1.25rem] sm:text-[1rem]">
